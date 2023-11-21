@@ -1,0 +1,51 @@
+/* CSS Document */
+.bodytext {font-family:Arial;font-size:11px;color:#000000;text-decoration: none;}
+.titletext {font-family:Arial;font-size:14px;color:#000000;text-decoration: none; font-weight:bold;}
+.quotetext {font-family:Arial;font-size:10px;color:#000000;text-decoration: none; font-style:italic}
+
+.greenmenu:link {font-family:Arial;font-size:12px;color:#000000;text-decoration: none;}
+.greenmenu:visited {font-family:Arial;font-size:12px;color:#000000;text-decoration: none;}
+.greenmenu:active {font-family:Arial;font-size:12px;color:#000000;text-decoration: none;}
+.greenmenu:hover {font-family:Arial;font-size:12px;color:#FFFFFF;text-decoration: none;}
+
+.bodylink:link {font-family:Arial;font-size:11px;color:#000000;text-decoration: none;}
+.bodylink:visited {font-family:Arial;font-size:11px;color:#000000;text-decoration: none;}
+.bodylink:active {font-family:Arial;font-size:11px;color:#000000;text-decoration: none;}
+.bodylink:hover {font-family:Arial;font-size:11px;color:#7EB739;text-decoration: none;}
+
+.whitemenu:link {font-family:Arial;font-size:12px;color:#365618;text-decoration: none;}
+.whitemenu:visited {font-family:Arial;font-size:12px;color:#365618;text-decoration: none;}
+.whitemenu:active {font-family:Arial;font-size:12px;color:#365618;text-decoration: none;}
+.whitemenu:hover {font-family:Arial;font-size:12px;color:#7EB739;text-decoration: none;}
+
+.dark:link {font-family:Arial;font-size:11px;color:#ffffff;text-decoration: none;}
+.dark:visited {font-family:Arial;font-size:11px;color:#ffffff;text-decoration: none;}
+.dark:active {font-family:Arial;font-size:11px;color:#ffffff;text-decoration: none;}
+.dark:hover {font-family:Arial;font-size:11px;color:#EFE2D6;text-decoration: none;}
+.footertext {font-family:Arial;font-size:11px;color:#ffffff;text-decoration: none;}
+
+.bodymenu:link {font-family:Arial;font-size:11px;color:#365618;text-decoration: none;}
+.bodymenu:visited {font-family:Arial;font-size:11px;color:#365618;text-decoration: none;}
+.bodymenu:active {font-family:Arial;font-size:11px;color:#365618;text-decoration: none;}
+.bodymenu:hover {font-family:Arial;font-size:11px;color:#7EB739;text-decoration: none;}
+.bodymenutext {font-family:Arial;font-size:11px;color:#365618;text-decoration: none;}
+/*
+     FILE ARCHIVED ON 14:54:54 Nov 24, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:04:09 Nov 21, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 1935.607
+  exclusion.robots: 0.072
+  exclusion.robots.policy: 0.062
+  cdx.remote: 0.063
+  esindex: 0.009
+  LoadShardBlock: 1882.641 (3)
+  PetaboxLoader3.datanode: 1940.075 (5)
+  load_resource: 201.19 (2)
+  PetaboxLoader3.resolve: 75.713 (2)
+*/
