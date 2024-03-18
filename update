@@ -4,6 +4,7 @@ DIR_PUBLIC=./public
 DIR_TEMPLATES=./templates
 
 NAVBAR0=$(cat templates/navbar.html)
+CONTACT0=$(cat templates/contact.html)
 
 BG_MARKS=("__INDEX_BG__" "__SERVICES_BG__" "__ABOUT_BG__")
 BG_CSS='style="background-image: url(./images/menuitembg.png)"'
@@ -30,9 +31,8 @@ for mark in ${CLASS_MARKS[@]}; do
 done
 
 echo '  Creating HTML file...'
-perl -0pe "s|__NAVBAR__|$navbar|" \
-    $DIR_TEMPLATES/index.html \
-    > $DIR_PUBLIC/index.html
+perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/index.html \
+    | perl -0pe "s|__CONTACT_MENU__|$CONTACT0|" > $DIR_PUBLIC/index.html
 
 # services ---------------------------------------------------------------------
 
@@ -52,9 +52,9 @@ for mark in ${CLASS_MARKS[@]}; do
 done
 
 echo '  Creating HTML file...'
-perl -0pe "s|__NAVBAR__|$navbar|" \
-    $DIR_TEMPLATES/services.html \
-    > $DIR_PUBLIC/services.html
+perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/services.html \
+    | perl -0pe "s|__CONTACT_MENU__|$CONTACT0|" > $DIR_PUBLIC/services.html
+
 
 # about ------------------------------------------------------------------------
 
@@ -74,6 +74,5 @@ for mark in ${CLASS_MARKS[@]}; do
 done
 
 echo '  Creating HTML file...'
-perl -0pe "s|__NAVBAR__|$navbar|" \
-    $DIR_TEMPLATES/about.html \
-    > $DIR_PUBLIC/about.html
+perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/about.html \
+    | perl -0pe "s|__CONTACT_MENU__|$CONTACT0|" > $DIR_PUBLIC/about.html
