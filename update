@@ -6,7 +6,7 @@ DIR_TEMPLATES=./templates
 NAVBAR0=$(cat templates/navbar.html)
 
 BG_MARKS=("__INDEX_BG__" "__SERVICES_BG__" "__ABOUT_BG__")
-BG_CSS='background="./images/menuitembg.png"'
+BG_CSS='style="background-image: url(./images/menuitembg.png)"'
 
 CLASS_MARKS=("__INDEX_CLASS__" "__SERVICES_CLASS__" "__ABOUT_CLASS__")
 CLASS_ACTIVE=greenmenu

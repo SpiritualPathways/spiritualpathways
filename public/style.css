@@ -1,6 +1,26 @@
 /* New */
-#navbar {
 
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+}
+#navbar div {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 125px;
+}
+#navbar div a {
+    display: block;
+    line-height: 37px;
+    text-align: center;
+    width: 100%;
 }
 
 /* Original */
