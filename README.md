@@ -1,1 +1,1 @@
-# PeterBarnes_spiritualpathways.ca
+# spiritualpathways

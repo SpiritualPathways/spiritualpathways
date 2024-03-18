@@ -1,0 +1,79 @@
+#!/bin/sh
+
+DIR_PUBLIC=./public
+DIR_TEMPLATES=./templates
+
+NAVBAR0=$(cat templates/navbar.html)
+
+BG_MARKS=("__INDEX_BG__" "__SERVICES_BG__" "__ABOUT_BG__")
+BG_CSS='background="./images/menuitembg.png"'
+
+CLASS_MARKS=("__INDEX_CLASS__" "__SERVICES_CLASS__" "__ABOUT_CLASS__")
+CLASS_ACTIVE=greenmenu
+CLASS_INACTIVE=whitemenu
+
+# index ------------------------------------------------------------------------
+
+echo 'Creating index.html:'
+navbar="$NAVBAR0"
+
+echo '  Adding background image to active navbar item...'
+navbar=$(printf "$navbar" | sed -e "s|__INDEX_BG__|$BG_CSS|")
+for mark in ${BG_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark||")
+done
+
+echo '  Adding CSS classes to navbar items...'
+navbar=$(printf "$navbar" | sed -e "s|__INDEX_CLASS__|$CLASS_ACTIVE|")
+for mark in ${CLASS_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark|$CLASS_INACTIVE|")
+done
+
+echo '  Creating HTML file...'
+perl -0pe "s|__NAVBAR__|$navbar|" \
+    $DIR_TEMPLATES/index.html \
+    > $DIR_PUBLIC/index.html
+
+# services ---------------------------------------------------------------------
+
+echo 'Creating services.html:'
+navbar="$NAVBAR0"
+
+echo '  Adding background image to active navbar item...'
+navbar=$(printf "$navbar" | sed -e "s|__SERVICES_BG__|$BG_CSS|")
+for mark in ${BG_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark||")
+done
+
+echo '  Adding CSS classes to navbar items...'
+navbar=$(printf "$navbar" | sed -e "s|__SERVICES_CLASS__|$CLASS_ACTIVE|")
+for mark in ${CLASS_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark|$CLASS_INACTIVE|")
+done
+
+echo '  Creating HTML file...'
+perl -0pe "s|__NAVBAR__|$navbar|" \
+    $DIR_TEMPLATES/services.html \
+    > $DIR_PUBLIC/services.html
+
+# about ------------------------------------------------------------------------
+
+echo 'Creating about.html:'
+navbar="$NAVBAR0"
+
+echo '  Adding background image to active navbar item...'
+navbar=$(printf "$navbar" | sed -e "s|__ABOUT_BG__|$BG_CSS|")
+for mark in ${BG_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark||")
+done
+
+echo '  Adding CSS classes to navbar items...'
+navbar=$(printf "$navbar" | sed -e "s|__ABOUT_CLASS__|$CLASS_ACTIVE|")
+for mark in ${CLASS_MARKS[@]}; do
+    navbar=$(printf "$navbar" | sed -e "s|$mark|$CLASS_INACTIVE|")
+done
+
+echo '  Creating HTML file...'
+perl -0pe "s|__NAVBAR__|$navbar|" \
+    $DIR_TEMPLATES/about.html \
+    > $DIR_PUBLIC/about.html
