@@ -34,8 +34,8 @@ done
 echo '  Creating HTML file...'
 perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/index.html \
     | perl -0pe "s|__CONTACT_MENU__|$CONTACT_MENU0|" \
-           | perl -0pe "s|__INFO_MENU__|$INFO_MENU0|" \
-                  > $DIR_PUBLIC/index.html
+    | perl -0pe "s|__INFO_MENU__|$INFO_MENU0|" \
+    > $DIR_PUBLIC/index.html
 
 # services ---------------------------------------------------------------------
 
@@ -56,7 +56,9 @@ done
 
 echo '  Creating HTML file...'
 perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/services.html \
-    | perl -0pe "s|__CONTACT_MENU__|$CONTACT_MENU0|" > $DIR_PUBLIC/services.html
+    | perl -0pe "s|__CONTACT_MENU__|$CONTACT_MENU0|" \
+    | perl -0pe "s|__INFO_MENU__|$INFO_MENU0|" \
+    > $DIR_PUBLIC/services.html
 
 
 # about ------------------------------------------------------------------------
@@ -78,4 +80,6 @@ done
 
 echo '  Creating HTML file...'
 perl -0pe "s|__NAVBAR__|$navbar|" $DIR_TEMPLATES/about.html \
-    | perl -0pe "s|__CONTACT_MENU__|$CONTACT_MENU0|" > $DIR_PUBLIC/about.html
+    | perl -0pe "s|__CONTACT_MENU__|$CONTACT_MENU0|" \
+    | perl -0pe "s|__INFO_MENU__|$INFO_MENU0|" \
+    > $DIR_PUBLIC/about.html
