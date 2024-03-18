@@ -6,21 +6,45 @@ html, body {
     height: 100%;
 }
 
+.flex-grow0 { flex-grow: 0; }
+.flex-grow1 { flex-grow: 1; }
+
 #navbar {
     display: flex;
     justify-content: flex-begin;
     height: 100%;
 }
-#navbar div {
+#navbar > div {
     background-position: center;
     background-repeat: no-repeat;
     width: 125px;
 }
-#navbar div a {
+#navbar > div > a {
     display: block;
     line-height: 37px;
     text-align: center;
     width: 100%;
+}
+
+#info_menu {
+    display: flex;
+    padding: 20px;
+}
+#info_menu > div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    padding-right: 30px;
+    width: 33%;
+}
+#info_menu > div:last-child {
+    padding-right: 0;
+}
+#info_menu > div > * {
+    margin-bottom: 1em;
+}
+#info_menu > div > *:last-child {
+    margin-bottom: 0;
 }
 
 /* Old */
