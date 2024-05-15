@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+header > h1 {
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+nav > div {
+    padding: 0 10px;
+}
+nav > div > a {
+    display: block;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+main > div {
+    padding: 1rem;
+}
+
+footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.bg-dark { background: #F5F3F1; }
+.bg-light { background: #FFFFFF; }
+
+.vsplit {
+    display: flex;
+}
