@@ -6,12 +6,32 @@
 }
 @font-face {
     font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: medium;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: semibold;
+}
+@font-face {
+    font-family: 'Montserrat';
     src: url('fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: bold;
 }
 
+:root {
+    --text-color:       #000000;
+    --text-color-alt:   #646464;
+    --background-dark:  #F5F3F1;
+    --background-light: #FFFFFF;
+}
+
 * {
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -38,10 +58,12 @@ nav > div {
 }
 nav > div > a {
     display: block;
-    line-height: 2em;
+    font-weight: 600;
+    line-height: 2rem;
     text-align: center;
     width: 100%;
 }
+nav > div > a:hover { color: var(--text-color-alt); }
 
 main {
     display: flex;
@@ -50,8 +72,8 @@ main {
 section {
     padding: 1rem;
 }
-section:nth-child(odd) { background: #F5F3F1; }
-section:nth-child(even) { background: #FFFFFF; }
+section:nth-child(odd) { background: var(--background-dark); }
+section:nth-child(even) { background: var(--background-light); }
 section > * {
     margin: 0 auto;
     max-width: 60rem;
