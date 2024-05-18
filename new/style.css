@@ -24,10 +24,11 @@
 }
 
 :root {
-    --text-color:       #000000;
-    --text-color-alt:   #646464;
-    --background-dark:  #F5F3F1;
-    --background-light: #FFFFFF;
+    --text-color:        #000000;
+    --text-color-alt:    #646464;
+    --background-dark:   #B5B3B1;
+    --background-medium: #D5D3D1;
+    --background-light:  #FFFFFF;
 }
 
 * {
@@ -45,6 +46,9 @@ h2 {
     padding: 0.8rem 0 0.8rem 0;
 }
 
+header {
+    background: var(--background-medium);
+}
 header > h1 {
     padding: 1rem;
 }
@@ -72,14 +76,18 @@ main {
 section {
     padding: 1rem;
 }
-section:nth-child(odd) { background: var(--background-dark); }
-section:nth-child(even) { background: var(--background-light); }
+section:nth-child(odd) { background: var(--background-light); }
+section:nth-child(even) { background: var(--background-medium); }
 section > * {
     margin: 0 auto;
     max-width: 60rem;
 }
+section p:not(:last-child) {
+    margin-bottom: 1rem;
+}
 
 footer {
+    background: var(--background-dark);
     font-size: 0.9rem;
     padding: 1rem;
     text-align: right;
